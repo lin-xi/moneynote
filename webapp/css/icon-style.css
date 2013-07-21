@@ -1,0 +1,60 @@
+@font-face {
+	font-family: 'leeme-mnote-icon';
+	src:url('fonts/leeme-mnote-icon.eot');
+	src:url('fonts/leeme-mnote-icon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/leeme-mnote-icon.woff') format('woff'),
+		url('fonts/leeme-mnote-icon.ttf') format('truetype'),
+		url('fonts/leeme-mnote-icon.svg#leeme-mnote-icon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'leeme-mnote-icon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="i-"] {
+*/
+.i-pop-out, .i-pop-in, .i-angle-left, .i-angle-right, .i-x-altx-alt, .i-check-alt, .i-trashcan {
+	font-family: 'leeme-mnote-icon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.i-pop-out:before {
+	content: "\e000";
+}
+.i-pop-in:before {
+	content: "\e001";
+}
+.i-angle-left:before {
+	content: "\e002";
+}
+.i-angle-right:before {
+	content: "\e003";
+}
+.i-x-altx-alt:before {
+	content: "\e004";
+}
+.i-check-alt:before {
+	content: "\e005";
+}
+.i-trashcan:before {
+	content: "\e006";
+}

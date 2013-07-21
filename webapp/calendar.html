@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Box</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="mcnjqe@gmail.com">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="/css/icon-style.css" />
+
+	<style media="screen">
+	
+.clearfix:after{
+	content: '.';
+	height:0;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+
+.ui-calendr{font-size: 24px;
+	background: #cebe29;
+	background-image: linear-gradient(right bottom, rgb(154,222,106) 6%, rgb(22,171,114) 56%, rgb(72,240,170) 100%);
+	background-image: -o-linear-gradient(right bottom, rgb(154,222,106) 6%, rgb(22,171,114) 56%, rgb(72,240,170) 100%);
+	background-image: -moz-linear-gradient(right bottom, rgb(154,222,106) 6%, rgb(22,171,114) 56%, rgb(72,240,170) 100%);
+	background-image: -webkit-linear-gradient(right bottom, rgb(154,222,106) 6%, rgb(22,171,114) 56%, rgb(72,240,170) 100%);
+	background-image: -ms-linear-gradient(right bottom, rgb(154,222,106) 6%, rgb(22,171,114) 56%, rgb(72,240,170) 100%);
+	background-image: -webkit-gradient(linear, right bottom, left top,	color-stop(0.06, rgb(154,222,106)),	color-stop(0.56, rgb(22,171,114)), color-stop(1, rgb(72,240,170)));
+	border-radius:  10px; margin:0 auto; box-shadow:0px 0px 20px rgba( 0, 0, 0, 0.6 );
+}
+/*头部*/
+.ui-calendr .header{width: 100%; height: 70px; border-radius: 10px 10px 0 0; background-color: rgba(255, 255, 255, 0.1); }
+/*阴影*/
+.ui-calendr .prev, .ui-calendr .next, .ui-calendr .max, .ui-calendr .min, .ui-calendr .header .year, .ui-calendr .header .month{
+	box-shadow: inset 0 2px rgba(255, 255, 255, 0.8),
+	 0 1px 2px rgba(0, 0, 0, 0.35),
+	 0 0 0 1px rgb(55, 56, 56),
+	 0 2px rgba(255, 255, 255, 1),
+	 2px 0 rgba(255, 255, 255, 0.8);
+	 color:#000;
+}
+.ui-calendr .max, .ui-calendr .min{
+	float:right; width: 36px; text-align: center; height: 25px; font-size: 20px; color:#000; border-radius: 5px; cursor: pointer; margin-right: 20px;  margin-top: 20px;
+}
+.ui-calendr .prev:hover, .ui-calendr .next:hover, .ui-calendr .max:hover, .ui-calendr .min:hover, .ui-calendr .header .year:hover, .ui-calendr .header .month:hover{
+	background-image: -o-linear-gradient(top, #F7F2F6, #B2AC9E);
+	background-image: -moz-linear-gradient(top, #F7F2F6, #B2AC9E);
+	background-image: -webkit-linear-gradient(top, #F7F2F6, #B2AC9E);
+	background-image: -ms-linear-gradient(top, #F7F2F6, #B2AC9E);
+	background-image: -webkit-gradient(linear, top, color-stop(00, #F7F2F6), color-stop(1, #B2AC9E));
+	background-image: linear-gradient(top, #F7F2F6, #B2AC9E);
+	color:#444;
+}
+.ui-calendr .min{display: none; }
+
+.ui-calendr .prev, .ui-calendr .next{
+	font-size: 26px; display:inline-block; width: 36px; text-align: center; color:#000; cursor: pointer; 
+}
+.ui-calendr .prev{margin-left: 30px; border-radius: 10px 0 0 10px;}
+.ui-calendr .next{border-radius: 0 10px 10px 0; }
+
+.ui-calendr .header .year, .ui-calendr .header .month{font-size:32px; display: inline-block; height: 46px; line-height: 45px; width: 120px; margin-top: 8px; text-align: center; 
+}
+.ui-calendr .header .year{border-radius: 10px 0 0 10px; }
+.ui-calendr .header .month{border-radius: 0 10px 10px 0;}
+
+/*渐变背景*/
+.ui-calendr .weekdaylist, .ui-calendr .prev, .ui-calendr .next, .ui-calendr .header .year, .ui-calendr .header .month{background: #ddd;
+	background: -moz-linear-gradient(top, #eeeeee 0%, #dddddd 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#dddddd));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#dddddd',GradientType=0);
+}
+/*星期*/
+.ui-calendr .weekday{list-style:none; position: relative; width: 100%; height:35px; margin-bottom: 3px;
+}
+.ui-calendr .weekdaylist{position:absolute; width: 102%; left:-1%; height:35px; line-height: 35px; box-shadow: 0px 0px 10px rgba( 0, 0, 0, 0.4); }
+.ui-calendr .weekdaylist li{padding:0; margin:0; float: left; width: 14%; text-align: center;}
+.weekdaylist::before{
+	content: "";
+	position: absolute;
+	top: 35px;
+	left: 0;
+	width: 0;
+	height: 0;
+	z-index: -1;
+	border: 30px solid transparent;
+	border-color: hsla(20,25%,25%, 0.6) hsla(20,25%,25%, 0.6) transparent transparent;
+}
+.weekdaylist::after{
+	content: "";
+	position: absolute;
+	top: 35px;
+	right: 0;
+	width: 0;
+	height: 0;
+	z-index: -1;
+	border: 30px solid transparent;
+	border-color: hsla(20,25%,25%, 0.6) transparent transparent hsla(20,25%,25%, 0.6);
+}
+
+/*日*/
+.ui-calendr .days{height:92%; min-height: 500px; width: 100%; background-color: rgba(255, 255, 255, 0.1); border-radius:  0 0 10px 10px; color:#222;}
+.ui-calendr .days li{padding:0; margin:0; float: left; width: 14%; height: 20%; min-height: 80px; text-align: center;}
+.ui-calendr .days li:first-child{}
+.ui-calendr .days li:hover{
+	cursor: pointer;  border-radius: 10px;
+	box-shadow: inset 0 2px rgba(255, 255, 255, 0.8),
+	 0 1px 2px rgba(0, 0, 0, 0.35),
+	 0 0 0 2px rgb(55, 56, 56),
+	 0 4px rgba(255, 255, 255, 0.8),
+	 4px 0 rgba(255, 255, 255, 0.8);
+}
+
+
+</style>
+	
+</head>
+	
+<body>
+	
+	<div id="calendar">
+	</div>
+
+	<script src="js/sea.js" data-config="config"></script>
+	
+	<script type="text/javascript">
+		seajs.use('leeme/calendar', function(Calendar) {
+			new Calendar({node: '#calendar', width: 800, height: 500});
+		});
+	</script>
+
+	<script id="model" type="text/template">
+		<div class="ui-calendr">
+			<div class="header">
+				<span class="year"><span><span class="month"><span><span class="prev" data-icon="&#xf053;"><span><span class="next"; data-icon="&#xf054;"><span><span class="full"; data-icon="&#xf08e;"><span>
+			</div>
+			<div class="weekday"><ul class="weekday-content">
+					<li>星期一</li>
+					<li>星期二</li>
+					<li>星期三</li>
+					<li>星期四</li>
+					<li>星期五</li>
+					<li>星期六</li>
+					<li>星期日</li>
+				</ul>
+			</div>
+			<ul class="days">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+				<li>10</li>
+				<li>11</li>
+				<li>12</li>
+				<li>13</li>
+				<li>14</li>
+				<li>15</li>
+				<li>16</li>
+				<li>17</li>
+				<li>18</li>
+				<li>19</li>
+				<li>20</li>
+				<li>21</li>
+				<li>22</li>
+				<li>23</li>
+				<li>24</li>
+				<li>25</li>
+				<li>26</li>
+				<li>27</li>
+				<li>28</li>
+				<li>29</li>
+				<li>30</li>
+				<li>31</li>
+			</ul>
+		</div>
+	</script>
+
+</body>
+</html>

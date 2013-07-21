@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>MoneyNote</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="mcnjqe@gmail.com">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/datepicker.css" rel="stylesheet">
+	<link rel="stylesheet" href="/css/icon-style.css" />
+	<link rel="stylesheet/less" type="text/css" href="/css/box1.less">
+	<script src="/js/open/less-1.3.3.min.js" type="text/javascript"></script>
+	<script src="/js/raphael/raphael.js"></script>
+	<link href="css/all.css" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon.ico">
+	</head>
+	
+	<body>
+
+	<div class="page-left">
+		<p class="logo">
+			<img src="images/logo.png"/>
+		</p>
+
+		<div class="menu-item">
+			<div class="col date-wraper">
+				<span class="c-month"></span>
+				<span class="day-wraper"><span class="c-day"></span></span>
+			</div>
+		</div>
+
+		<div class="menu-container">
+			<span class="menu-time"></span><span class="menu-type"></span>
+		</div>
+	</div>
+		
+	<div class="page-content">
+		<div class="contentCube">
+		</div>	
+
+		<div class="calendar">
+		</div>
+
+		<div class="chart">
+			<div class="top-bar">
+				<span class="select-year"></span><span class="select-month"></span>
+			</div>
+			<div id="pichart"></div>
+		</div>
+
+		<hr>
+		<footer>
+			<p>&copy; Leeme 2013</p>
+		</footer>
+	</div>
+
+
+    <script src="js/sea.js" data-config="config" data-main="page"></script>
+
+    <script id="add-panel-model" type="text/template">
+    	<div>
+    		<span class="col-left">
+	    		<p>选择分类</p>
+	    		<br/>
+				<span class="consumeTypelist"></span>
+				<br>
+				<button id="consumeItem-btn" class="button">分类管理</button>
+			</span>
+			<span class="col-right">
+				<input id="goods" type="text" placeholder="物品" class="input-large search-query"><br/><br/>
+				<input id="money" type="text" placeholder="金额" class="input-large search-query">
+				<br/>
+				<br/>
+				<button id="add-consume-btn" class="button">确定</button>
+			</span>
+			<span class="close close-left"><b data-icon="&#xe004;"></b></span>
+		</div>
+	</script>
+
+	<script id="consumeTable-model" type="text/template">
+		<div class="consumeTable">
+			<div class="head">
+				<span>消费记录</span>
+			</div>
+			<div class="contentTable">
+			</div>
+			<div class="foot">
+				<button id="add-btn" class="button">添加新记录</button>
+			</div>
+		</div>
+	</script>
+
+	<script id="consumeItem-model" type="text/template">
+		<div>
+			<span class="col-left">
+				<input name="consumeItemName" id="consumeItemName" type="text" placeholder="消费项目名称"/> <br/>
+				<button id="consumeItem-add" class="button">确定</button>
+			</span>
+			<span class="col-right">
+			    <div id="consumeItem-ul"></div>
+			</span>
+			<span class="close close-back"><b data-icon="&#xe004;"></b></span>
+        </div>
+	</script>
+
+	<script src="/js/raphael/raphael.js"></script>
+	<script src="/js/raphael/pieChart.js"></script>
+
+	</body>
+</html>

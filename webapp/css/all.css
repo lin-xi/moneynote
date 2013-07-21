@@ -1,0 +1,243 @@
+@font-face{
+font-family:"lround"; src: url("RTWSYueGoTrial-Regular.otf");
+}
+body, p, div, span, ul, li, i, a{padding:0; margin:0; border:none;}
+a, a:hover, a:visited{text-decoration: none;}
+ul{list-style:none;}
+li{display:inline; vertical-align:middle;}
+
+html{height: 100%;}
+body{
+	font-family:"lround"; color: #62412e; text-shadow: 0 1px 2px rgba(255,255,255, 0.7); height: 100%;
+	background: url(../images/glow.png) center center no-repeat, url(../images/light-noise.gif);
+}
+
+.page-left{position: fixed; top:0px; left:0px; width:285px; height:100%;
+	background: url(/images/bg2.png) left top no-repeat; text-align: center;
+}
+.page-content{margin-left: 320px; margin-top:20px;}
+.col{display:inline-block; width:90%; padding: 5%; font-size: 24px; vertical-align: top;}
+.col-left{display:inline-block; width:30%; padding: 5%; font-size: 24px; vertical-align: top;}
+.col-right{display:inline-block; width:30%; padding: 5%; font-size: 24px; vertical-align: top;}
+
+.logo{width:128px; margin:auto; margin-top: 20px;}
+.close{position:absolute; top:20px; right:50px; width:32px; height:32px; font-size: 3.5em;}
+.close:hover{
+	color:#000;
+}	
+
+.c-month{ font-size: 4em; color:#ddd;
+	font-family: 'Arvo', arial, serif;
+	vertical-align: middle;
+	font-weight: 700;
+	text-align: center;
+	text-shadow: -2px -2px 1px #fff, -1px -1px 1px #fff, 1px 1px 1px rgba(232,247,255,0.9), 1px 1px 0 #2a658b, 2px 2px 0 #29638a, 3px 3px 0 #286188, 4px 4px 0 #275f85, 5px 5px 0 #265d83, 6px 6px 0 #255a80, 7px 7px 0 #24577d, 8px 8px 0 #235479, 9px 9px 0 #215075, 10px 10px 0 #1f4c71, 11px 11px 0 #1e486c, 12px 12px 1px rgba(28,67,103,0.5), 14px 14px 12px rgba(5,13,20,0.5);
+}
+.day-wraper{display:inline-block;width:90px; height:90px; line-height:90px; margin-left: 20px; 
+	vertical-align: middle;background-color:rgba(46, 204, 113, 0.8); box-shadow:0px 0px 10px rgba( 0, 0, 0, 1); text-align: center; border-radius: 40px 40px 40px 0;}
+.c-day{
+	font-size: 3em; color:#f00;
+
+	font-weight: 700;
+	-webkit-text-stroke: 0;
+	color: transparent;
+	background-color: rgba(0, 0, 0, 0.5);
+	-webkit-background-clip: text;
+	text-shadow: rgba(255,255,255,0.5) 0 5px 6px, rgba(255,255,255,0.2) 1px 3px 3px;
+}
+.date .day-wraper:hover{background: rgba(75,147,253, 1);}
+
+.menu-item{
+	width: 250px; margin:1px auto; padding: 5px 0 5px 0;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 30px;
+	box-shadow: inset 0 2px rgba(255, 255, 255, 0.8),
+	 0 2px 3px rgba(0, 0, 0, 0.35),
+	  0 0 0 1px rgba(0, 0, 0, 0.1),
+	   0 0 0 3px rgb(55, 56, 56),
+	    0 6px rgba(255, 255, 255, 0.8),
+	    5px 0 rgba(255, 255, 255, 0.8);
+}
+.menu-item:hover{
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu-container{display:inline-block; margin:40px auto;}
+.menu-container span{border-radius: 32px; box-shadow:inset 0 0 15px rgba( 0, 0, 0, 1); cursor:pointer; 
+-webkit-transform: rotate(360deg);
+   -moz-transform: rotate(360deg);
+     -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+        transform: rotate(360deg);}
+
+.menu-container span:hover{box-shadow:inset 0px 0px 30px rgba( 0, 0, 0, 1)}
+.menu-time{display:inline-block; width:64px; height: 64px; background: url(/images/month.png);}
+.menu-type{display:inline-block; width:64px; height: 64px; background: url(/images/chat.png); margin-left: 10px;}
+
+.contentCube{position: relative;}
+
+
+.consumeTable{width:800px; margin:30px auto; background-color: rgba(46, 204, 113, 1); 
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	box-shadow:0px 0px 5px rgba( 0, 0, 0, 0.6 );
+}
+.consumeTable .head{font-size: 24px; line-height:50px; height:50px; padding-left: 20px; border-radius: 10px 10px 0 0; }
+.consumeTable .head span{display:inline-block; width: 150px;}
+.consumeTable .head input{margin-left: 5px;}
+.consumeTable .foot{color: #fff; font-size: 24px; line-height:60px; height:60px; text-align: right; padding-right: 47px; border-radius: 0 0 10px 10px;
+}
+
+.contentTable{box-shadow:0px 0px 20px rgba( 0, 0, 0, 0.3 );}
+.contentTable .col1{width:180px; padding-left:15px;}
+.contentTable .col2{width:350px;}
+.contentTable .col3{width:150px;}
+
+.week-report{height:100px;}
+.week-report li{float:left; height:270px; width:100px; margin-right:15px; margin-top: -100px; background-color:#fff;
+	text-align:center; padding-top:30px; font-size:28px;
+	-moz-box-shadow:2px 2px 5px #888;
+	-webkit-box-shadow:2px 2px 5px #888;
+	box-shadow:2px 2px 5px #888;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.top-bar{border-radius: 5px; border: 1px #ccc solid; padding: 10px 10px 5px 10px; background-color: #f0f0f0;}
+.select-year{display: inline-block; width: 80px;}
+.select-month{display: inline-block; width: 60px; margin-left: 10px;}
+
+.pichart{width: 400px; height: 400px;}
+
+.box{
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow:0px 0px 20px rgba( 0, 0, 0, 0.6 );
+	-webkit-box-shadow:0px 0px 20px rgba( 0, 0, 0, 0.6 );
+	box-shadow:0px 0px 20px rgba( 0, 0, 0, 0.6 );
+	padding:20px;
+	background: rgba(255, 255, 255, 0.7);
+}
+
+.ui-listbox{width:100%; border:2px solid #0088CC; background-color:#f5f5f5; padding:5px; border-radius:5px; font-size: 0.9em}
+.ui-listbox li{display:block; padding:5px; border-radius:5px; margin:2px;}
+.ui-listbox li:hover{background-color:#0088CC;}
+.ui-listbox .text{display:block; width:100%;}
+.ui-listbox .command{float:right;}
+.ui-listbox .li-selected{background-color:#0088CC;}
+
+.ui-tips{position: absolute; z-index: 900; }
+.ui-tips .tips-content{display:inline-block; padding:10px; background-color: rgba(0, 136, 204, 0.9); font-size: 28px; color:#222; border-radius: 10px; box-shadow:0px 0px 20px rgba( 0, 0, 0, 0.7 );}
+.triangle-down{position:absolute; left:50%; bottom:-30px; margin-left:-15px; border:15px solid transparent; border-top-color:#0088CC;}
+.triangle-up{position:absolute; left:50%; top:-30px; margin-left:-15px; border:15px solid transparent; border-bottom-color:#0088CC;}
+.triangle-left{position:absolute; top:50%; left:-30px; margin-top:-15px; border:15px solid transparent; border-right-color:#0088CC;}
+.triangle-right{position:absolute; top:50%; right:-30px; margin-top:-15px; border:15px solid transparent; border-left-color:#0088CC;}
+
+.ui-table li{display:block; background-color:#ecf0f5; height:50px; line-height:50px; font-size: 24px; border-bottom: 1px dashed #d5d5d5; }
+.ui-table li:first-child{background-color:#d5d5d5;}
+.ui-table li:last-child{border:none; background-color:#d5d5d5;}
+.ui-table li span{display: inline-block;}
+
+.ui-dialog{position: absolute; z-index: 901;}
+.ui-dialog .tips-content{display:inline-block; padding:10px 10px 60px 10px; background-color: rgba(0, 136, 204, 0.9); font-size: 28px; color:#222; border-radius: 10px; box-shadow:0px 0px 20px rgba( 0, 0, 0, 0.7 );}
+.ui-dialog .btnArea{position: absolute; left:0; bottom:0; background-color:#C0C0C0; border-radius: 0 0 10px 10px; width:100%; height:50px; line-height: 50px; font-size: 1.3em;}
+.ui-dialog .ok-btn{float:right; margin: 3px 10px 0 0;}
+.ui-dialog .cancel-btn{float:left; margin: 3px 0 0 10px;}
+.ui-dialog .btnArea a{color: #62412e;}
+.ui-dialog .btnArea a:hover{color: #000;}
+.ui-dialog .triangle4{position: absolute; display:inline-block; width:30px; height:30px; background-color:#C0C0C0; box-shadow:0px 0px 20px rgba( 0, 0, 0, 0.7 );
+	left:50%; bottom:-15px; margin-left:-15px; border-radius: 0 0 5px 0;
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+ 		 -o-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+		    transform: rotate(45deg);
+}
+
+.ui-calendar{font-size: 24px; background: #cebe29; padding-bottom: 5px; background-image: linear-gradient(right bottom, rgb(154,222,106) 6%, rgb(22,171,114) 56%, rgb(72,240,170) 100%); background-image: -o-linear-gradient(right bottom, rgb(154,222,106) 6%, rgb(22,171,114) 56%, rgb(72,240,170) 100%);	background-image: -moz-linear-gradient(right bottom, rgb(154,222,106) 6%, rgb(22,171,114) 56%, rgb(72,240,170) 100%); background-image: -webkit-linear-gradient(right bottom, rgb(154,222,106) 6%, rgb(22,171,114) 56%, rgb(72,240,170) 100%); background-image: -ms-linear-gradient(right bottom, rgb(154,222,106) 6%, rgb(22,171,114) 56%, rgb(72,240,170) 100%); background-image: -webkit-gradient(linear, right bottom, left top,	color-stop(0.06, rgb(154,222,106)),	color-stop(0.56, rgb(22,171,114)), color-stop(1, rgb(72,240,170)));	border-radius:  10px; margin:0 auto; box-shadow:0px 0px 20px rgba( 0, 0, 0, 0.6 ); }
+.ui-calendar .header{width: 100%; height: 70px; border-radius: 10px 10px 0 0; background-color: rgba(255, 255, 255, 0.1); }
+/*阴影*/
+.ui-calendar .prev, .ui-calendar .next, .ui-calendar .max, .ui-calendar .min, .ui-calendar .header .year, .ui-calendar .header .month{box-shadow: inset 0 2px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.35), 0 0 0 1px rgb(55, 56, 56), 0 2px rgba(255, 255, 255, 1), 2px 0 rgba(255, 255, 255, 0.8); color:#000;}
+.ui-calendar .max, .ui-calendar .min{float:right; width: 32px; text-align: center; height: 20px; font-size: 20px; color:#000; border-radius: 5px; cursor: pointer; margin-right: 20px;  margin-top: 20px;}
+/*hover 渐变背景*/
+.ui-calendar .prev:hover, .ui-calendar .next:hover, .ui-calendar .max:hover, .ui-calendar .min:hover, .ui-calendar .header .year:hover, .ui-calendar .header .month:hover{background-image: -o-linear-gradient(top, #F7F2F6, #B2AC9E); background-image: -moz-linear-gradient(top, #F7F2F6, #B2AC9E);	background-image: -webkit-linear-gradient(top, #F7F2F6, #B2AC9E); background-image: -ms-linear-gradient(top, #F7F2F6, #B2AC9E);	background-image: -webkit-gradient(linear, top, color-stop(00, #F7F2F6), color-stop(1, #B2AC9E)); background-image: linear-gradient(top, #F7F2F6, #B2AC9E); color:#444;}
+.ui-calendar .min{display: none; }
+.ui-calendar .prev, .ui-calendar .next{font-size: 26px; display:inline-block; width: 36px; text-align: center; color:#000; cursor: pointer;}
+.ui-calendar .prev{margin-left: 30px; border-radius: 10px 0 0 10px;}
+.ui-calendar .next{border-radius: 0 10px 10px 0; margin-left: 1px;}
+.ui-calendar .header .year, .ui-calendar .header .month{font-size:32px; display: inline-block; height: 46px; line-height: 45px; width: 120px; margin-top: 10px; text-align: center; }
+.ui-calendar .header .year{border-radius: 10px 0 0 10px; }
+.ui-calendar .header .month{border-radius: 0 10px 10px 0;}
+.ui-calendar .total-label{margin-left: 20px; margin-right: 10px; color:#a00;}
+.ui-calendar .total-money{color:#a00; font-weight: bold;}
+/*渐变背景*/
+.ui-calendar .weekdaylist, .ui-calendar .prev, .ui-calendar .next, .ui-calendar .header .year, .ui-calendar .header .month{background: #ddd;	background: -moz-linear-gradient(top, #eeeeee 0%, #dddddd 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#dddddd));	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#dddddd',GradientType=0);}
+.ui-calendar .weekday{list-style:none; position: relative; width: 100%; height:35px; margin-bottom: 3px;}
+.ui-calendar .weekdaylist{position:absolute; width: 102%; left:-1%; height:35px; line-height: 35px; box-shadow: 0px 0px 10px rgba( 0, 0, 0, 0.4); }
+.ui-calendar .weekdaylist li{padding:0; margin:0; float: left; width: 14%; text-align: center; line-height: 35px;}
+.weekdaylist:before{content: ""; position: absolute;	top: 35px; left: 0; width: 0; height: 0; z-index: -1; border: 30px solid transparent; border-color: hsla(20,25%,25%, 0.6) hsla(20,25%,25%, 0.6) transparent transparent;}
+.weekdaylist:after{content: ""; position: absolute; top: 35px;	right: 0; width: 0;	height: 0; z-index: -1;	border: 30px solid transparent;	border-color: hsla(20,25%,25%, 0.6) transparent transparent hsla(20,25%,25%, 0.6);}
+.ui-calendar .days{height:92%; min-height: 500px; width: 100%; background-color: rgba(255, 255, 255, 0.1); border-radius:  0 0 10px 10px; color:#222; }
+.ui-calendar .days li{padding:0; margin:0; float: left; width: 14%; height: 20%; min-height: 80px; text-align: center; font-weight: bold;}
+.ui-calendar .calendar-item{width:96%; height:96%; background-color: rgba(255, 255, 255, 0.1); border-radius: 10px; margin: 1%;}
+.ui-calendar .days li:hover{cursor: pointer;  border-radius: 10px; box-shadow: inset 0 2px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.35),	 0 0 0 2px rgb(55, 56, 56),	 0 4px rgba(255, 255, 255, 0.8), 4px 0 rgba(255, 255, 255, 0.8);}
+.ui-calendar .days p{padding-top: 30px; color:#666; font-weight: normal;}
+.ui-calendar .ui-day-wraper{display:inline-block; margin-top: 10px;}
+
+.ui-select{position:relative; width: 100%; height: 30px; line-height: 30px;  border-radius: 5px; border: 1px #444 solid; background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#dddddd));	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#dddddd',GradientType=0);}
+.ui-select .triangle{float:right; margin-top: 10px; margin-right: 6px; width: 0; height: 0; border-radius: 5px; border:10px solid transparent; border-top-color:#888;}
+.ui-select .cur-text{float:left; margin-left: 10px; overflow: hidden;}
+.ui-select .select-option{width: 100%; display: none; position: absolute; z-index: 300; top:30px; left:0; background-color: #fff; border-radius: 5px; border: 1px #444 solid; }
+.ui-select .select-option li{display: block; padding: 5px; height: 20px; cursor: pointer;}
+.ui-select .select-option li:hover{background-color: #bbb; border-radius: 5px;}
+
+
+.icon{width:32px; height:32px; cursor: pointer;}
+.icon:hover{
+	color:#000;
+}
+
+.button{
+	position: relative;
+	font-family: "lround";
+	font-size: 0.8em;
+	padding: 6px 20px;
+	border-radius: 10px;
+	color: white;
+	text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+	border: 5px solid transparent;
+	border-bottom-color: rgba(0, 0, 0, 0.2);
+	background: hsla(210, 100%, 50%, 1);
+	cursor: pointer;
+}
+.button:hover {
+	background: hsla(229, 100%, 60%, 1);
+	top:-1px;
+}
+.button:active {
+	top: 2px;
+}
+
+input{font-size: 20px; }
+
+.record{
+	display: block;
+	z-index: 10;
+	width: 112px;
+	height: 112px;
+	-webkit-border-radius: 59px;
+	-moz-border-radius: 59px;
+	-webkit-box-shadow: 0 0 6px rgba(0,0,0,.5);
+	-webkit-transition: all .25s linear;
+	overflow: hidden;
+	border: solid 1px black;
+	background: -webkit-gradient( linear, left top, left bottom, from(transparent), color-stop(0.1, transparent), color-stop(0.5, rgba(255,255,255,0.25)), color-stop(0.9, transparent), to(transparent)), -webkit-gradient( radial, 56 56, 10, 56 56, 114, from(transparent), color-stop(0.01, transparent), color-stop(0.021, rgba(0,0,0,1)), color-stop(0.09, rgba(0,0,0,1)), color-stop(0.1, rgba(28,28,28,1)), to(rgba(28,28,28,1)));
+	border-top: 1px solid rgba(255,255,255,.25);
+	/*
+	-webkit-animation:record 4s infinite linear;
+	-moz-animation:record 4s infinite linear;
+	*/
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>chart</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="mcnjqe@gmail.com">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/datepicker.css" rel="stylesheet">
+	<link rel="stylesheet" href="/css/icon-style.css" />
+	<link href="css/all.css" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<style type="text/css" media="screen">
+        #holder {
+            height: 250px;
+            width: 800px;
+        }
+    </style>
+
+	</head>
+	
+	<body>
+
+	
+		
+	<div class="page-content">
+
+		<div id="holder"></div>
+
+		<hr>
+		<footer>
+			<p>&copy; Leeme 2013</p>
+		</footer>
+	</div>
+	
+	<script src="/js/open/jquery-1.9.1.js"></script>
+    <script src="/js/raphael/raphael.js"></script>
+    <script src="/js/raphael/popup.js"></script>
+    <script src="/js/raphael/pieChart.js"></script>
+    
+    <script type="text/javascript">
+    	var labels = ['超市购物','买菜','鞋','衣服','套套','吃饭'],
+        data = [1205, 487, 310, 787, 214, 406];
+    	var r = Raphael("holder", 700, 700).pieChart(350, 350, 200, data, labels, "#fff");
+    </script>
+
+	</body>
+</html>
